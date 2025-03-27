@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react'
 import { Routes, Route } from 'react-router-dom'
-import { Moon, Sun } from 'lucide-react'
+import { Moon, Sun, BookOpen } from 'lucide-react'
 import { motion } from 'framer-motion'
 import Home from './pages/Home'
+import SudokuGuide from './pages/SudokuGuide'
 import NotFound from './pages/NotFound'
 
 function App() {
@@ -34,20 +35,33 @@ function App() {
             </h1>
           </div>
           
-          <motion.button
-            whileTap={{ scale: 0.95 }}
-            onClick={() => setDarkMode(!darkMode)}
-            className="p-2 rounded-full bg-surface-100 dark:bg-surface-700 hover:bg-surface-200 dark:hover:bg-surface-600 transition-colors"
-            aria-label="Toggle dark mode"
-          >
-            {darkMode ? <Sun size={20} /> : <Moon size={20} />}
-          </motion.button>
+          <div className="flex items-center gap-4">
+            <motion.a
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              href="/guide"
+              className="flex items-center gap-1 text-surface-600 dark:text-surface-300 hover:text-primary dark:hover:text-primary-light transition-colors"
+            >
+              <BookOpen size={18} />
+              <span className="hidden sm:inline">Sudoku Guide</span>
+            </motion.a>
+            
+            <motion.button
+              whileTap={{ scale: 0.95 }}
+              onClick={() => setDarkMode(!darkMode)}
+              className="p-2 rounded-full bg-surface-100 dark:bg-surface-700 hover:bg-surface-200 dark:hover:bg-surface-600 transition-colors"
+              aria-label="Toggle dark mode"
+            >
+              {darkMode ? <Sun size={20} /> : <Moon size={20} />}
+            </motion.button>
+          </div>
         </div>
       </header>
       
       <main className="flex-grow">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/guide" element={<SudokuGuide />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
