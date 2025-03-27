@@ -1,17 +1,5 @@
 import { motion } from 'framer-motion'
 
-// Import images
-import sudokuBoard from '../assets/images/sudoku-board.png'
-import sudokuRules from '../assets/images/sudoku-rules.png'
-import scanningTechnique from '../assets/images/scanning-technique.png'
-import crosshatching from '../assets/images/crosshatching.png'
-import pencilMarking from '../assets/images/pencil-marking.png'
-import nakedPairs from '../assets/images/naked-pairs.png'
-import hiddenPairs from '../assets/images/hidden-pairs.png'
-import xWing from '../assets/images/x-wing.png'
-import swordfish from '../assets/images/swordfish.png'
-import difficultyLevels from '../assets/images/difficulty-levels.png'
-
 // Image component for consistent styling
 const GuideImage = ({ src, alt, caption }) => (
   <div className="my-4">
@@ -50,7 +38,7 @@ const SudokuGuide = () => {
               </p>
               
               <GuideImage 
-                src={sudokuBoard} 
+                src="https://images.unsplash.com/photo-1586165368502-1bad197a6461?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
                 alt="Standard 9x9 Sudoku grid" 
                 caption="A standard 9×9 Sudoku grid with some cells filled in as starting clues" 
               />
@@ -76,7 +64,7 @@ const SudokuGuide = () => {
                 </div>
                 <div className="md:w-1/2 mt-4 md:mt-0">
                   <GuideImage 
-                    src={sudokuRules} 
+                    src="https://cdn.pixabay.com/photo/2020/04/29/16/30/sudoku-5109282_1280.jpg" 
                     alt="Sudoku rules visualization" 
                     caption="The three fundamental rules: unique numbers in each row, column, and 3×3 box" 
                   />
@@ -116,9 +104,9 @@ const SudokuGuide = () => {
                   </div>
                   <div className="md:w-1/2 mt-4 md:mt-0">
                     <GuideImage 
-                      src={scanningTechnique} 
+                      src="https://images.unsplash.com/photo-1580541832626-2a7131ee809f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
                       alt="Scanning technique visualization" 
-                      caption="Scanning rows, columns, and boxes to find possible placements for the number 5" 
+                      caption="Scanning rows, columns, and boxes to find possible placements for numbers" 
                     />
                   </div>
                 </div>
@@ -140,9 +128,9 @@ const SudokuGuide = () => {
                   </div>
                   <div className="md:w-1/2 mt-4 md:mt-0">
                     <GuideImage 
-                      src={crosshatching} 
+                      src="https://cdn.pixabay.com/photo/2018/10/31/15/45/sudoku-3786464_1280.jpg" 
                       alt="Crosshatching technique visualization" 
-                      caption="Using crosshatching to determine the only possible position for the number 7 in a box" 
+                      caption="Using crosshatching to determine the only possible position for a number in a box" 
                     />
                   </div>
                 </div>
@@ -159,7 +147,7 @@ const SudokuGuide = () => {
                   </div>
                   <div className="md:w-1/2 mt-4 md:mt-0">
                     <GuideImage 
-                      src={pencilMarking} 
+                      src="https://images.unsplash.com/photo-1628102128628-cea223daf59d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
                       alt="Pencil marking example" 
                       caption="A Sudoku grid with pencil marks showing candidate numbers for empty cells" 
                     />
@@ -187,9 +175,9 @@ const SudokuGuide = () => {
                   </div>
                   <div className="md:w-1/2 mt-4 md:mt-0">
                     <GuideImage 
-                      src={nakedPairs} 
+                      src="https://cdn.pixabay.com/photo/2015/08/09/00/22/sudoku-880750_1280.jpg" 
                       alt="Naked pairs example" 
-                      caption="A naked pair of 4,7 in two cells of a row, allowing us to eliminate 4 and 7 as candidates in other cells of that row" 
+                      caption="A naked pair of candidates in two cells of a row, allowing us to eliminate those candidates in other cells of that row" 
                     />
                   </div>
                 </div>
@@ -210,9 +198,9 @@ const SudokuGuide = () => {
                   </div>
                   <div className="md:w-1/2 mt-4 md:mt-0">
                     <GuideImage 
-                      src={hiddenPairs} 
+                      src="https://images.unsplash.com/photo-1579546929518-9e396f3cc809?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
                       alt="Hidden pairs example" 
-                      caption="A hidden pair of 3,8 in two cells of a column, allowing us to remove all other candidates from these cells" 
+                      caption="A hidden pair of candidates in two cells, allowing us to remove all other candidates from these cells" 
                     />
                   </div>
                 </div>
@@ -246,9 +234,9 @@ const SudokuGuide = () => {
                   </div>
                   <div className="md:w-1/2 mt-4 md:mt-0">
                     <GuideImage 
-                      src={xWing} 
+                      src="https://cdn.pixabay.com/photo/2020/05/19/13/48/sudoku-5190655_1280.jpg" 
                       alt="X-Wing pattern example" 
-                      caption="An X-Wing pattern formed by the candidate 5 in four cells, allowing for elimination in other cells" 
+                      caption="An X-Wing pattern formed by candidates in four cells, allowing for elimination in other cells" 
                     />
                   </div>
                 </div>
@@ -266,9 +254,9 @@ const SudokuGuide = () => {
                   </div>
                   <div className="md:w-1/2 mt-4 md:mt-0">
                     <GuideImage 
-                      src={swordfish} 
+                      src="https://images.unsplash.com/photo-1587145990301-9a61fde87624?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
                       alt="Swordfish pattern example" 
-                      caption="A Swordfish pattern formed by the candidate 3 in three rows and three columns" 
+                      caption="A Swordfish pattern formed by candidates in three rows and three columns" 
                     />
                   </div>
                 </div>
@@ -372,7 +360,7 @@ const SudokuGuide = () => {
               <h2 className="text-2xl font-bold mb-4">Difficulty Levels</h2>
               
               <GuideImage 
-                src={difficultyLevels} 
+                src="https://images.unsplash.com/photo-1611024847487-e26177381a3f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
                 alt="Sudoku difficulty levels" 
                 caption="Examples of puzzles across different difficulty levels, from easy to expert" 
               />
