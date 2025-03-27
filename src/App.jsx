@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
-import { Routes, Route } from 'react-router-dom'
-import { Moon, Sun, BookOpen } from 'lucide-react'
+import { Routes, Route, Link } from 'react-router-dom'
+import { Moon, Sun, BookOpen, Home } from 'lucide-react'
 import { motion } from 'framer-motion'
 import Home from './pages/Home'
 import SudokuGuide from './pages/SudokuGuide'
@@ -36,6 +36,16 @@ function App() {
           </div>
           
           <div className="flex items-center gap-4">
+            <motion.Link
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              to="/"
+              className="flex items-center gap-1 text-surface-600 dark:text-surface-300 hover:text-primary dark:hover:text-primary-light transition-colors"
+            >
+              <Home size={18} />
+              <span className="hidden sm:inline">Home</span>
+            </motion.Link>
+            
             <motion.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
